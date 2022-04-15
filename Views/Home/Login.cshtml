@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Login Page";
+}
+@model LoginUser
+
+
+<div class="text-center">
+    <h1 class="display-4">Login to this Cool Site!</h1><a class="login" href="/">Register</a>
+    <form class="d-flex frm" action="/users/login" method="post">
+        <div class="one">
+            <label class="d-block">Email: </label>
+            <span class="text-danger d-block" asp-validation-for="Email"></span>
+            <input asp-for="Email">
+            <label class="d-block">Password: </label>
+            <span class="text-danger d-block" asp-validation-for="Password"></span>
+            <input asp-for="Password">
+            <input type="submit" class="d-block sbmt" value="Sign up Now">
+        </div>
+    </form>
+</div>

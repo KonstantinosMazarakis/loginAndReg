@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Register Page";
+}
+@model User
+
+
+<div class="text-center">
+    <h1 class="display-4">Register to this Cool Site!</h1><a class="login" href="/login">Login</a>
+    <form class="d-flex frm" action="/users/create" method="post">
+        <div class="one">
+            <label class="d-block">First Name: </label>
+            <span class="text-danger d-block" asp-validation-for="FirstName"></span>
+            <input asp-for="FirstName">
+            <label class="d-block">Last Name: </label>
+            <span class="text-danger d-block" asp-validation-for="LastName"></span>
+            <input asp-for="LastName">
+            <label class="d-block">Email: </label>
+            <span class="text-danger d-block" asp-validation-for="Email"></span>
+            <input asp-for="Email">
+            <input type="submit" class="d-block sbmt" value="Sign up Now">
+        </div>
+        <div class="one">
+            <label class="d-block">Password: </label>
+            <span class="text-danger d-block" asp-validation-for="Password"></span>
+            <input asp-for="Password">
+            <label class="d-block">Confirm Password: </label>
+            <span class="text-danger d-block" asp-validation-for="ConfirmPassword"></span>
+            <input asp-for="ConfirmPassword">
+        </div>
+
+    </form>
+</div>
